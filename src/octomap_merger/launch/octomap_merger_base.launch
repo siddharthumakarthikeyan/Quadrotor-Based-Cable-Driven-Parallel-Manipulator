@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <include file="$(find octomap_merger)/launch/octomap_merger.launch">
+    <arg name="vehicle" value="Base" />
+    <arg name="type" value="base" />
+    <arg name="fullMerge" value="true" />
+  </include>
+</launch>

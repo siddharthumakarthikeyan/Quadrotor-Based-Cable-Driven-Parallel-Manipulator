@@ -1,0 +1,25 @@
+<launch>
+    <arg name="launch_prefix" default="" />
+    <arg name="node_namespace" default="apriltag_ros_continuous_node" />
+  
+    <!-- Set parameters -->
+    <rosparam command="load" file="$(find coppeliasim_ws)/config/settings.yaml" ns="n1" />
+    <rosparam command="load" file="$(find coppeliasim_ws)/config/tags.yaml" ns="n1" />
+    <rosparam command="load" file="$(find coppeliasim_ws)/config/settings.yaml" ns="n2" />
+    <rosparam command="load" file="$(find coppeliasim_ws)/config/tags.yaml" ns="n2" />
+    
+    <node pkg="apriltag_ros" type="apriltag_ros_continuous_node" name="n1" clear_params="true" output="screen" launch-prefix="$(arg launch_prefix)" >
+      <remap from="image_rect" to="/robot_1/kinect_2/camera/rgb_image" />
+      <remap from="camera_info" to="/robot_1/kinect_2/camera/camera_info" />
+      <param name="camera_frame" type="str" value="kinect_depth_2" />
+      <param name="publish_tag_detections_image" type="bool" value="true" />      
+    </node>
+
+    <node pkg="apriltag_ros" type="apriltag_ros_continuous_node" name="n2" clear_params="true" output="screen" launch-prefix="$(arg launch_prefix)" >
+        <remap from="image_rect" to="/robot_5/kinect_6/camera/rgb_image" />
+        <remap from="camera_info" to="/robot_5/kinect_6/camera/camera_info" />
+        <param name="camera_frame" type="str" value="kinect_depth_6" />
+        <param name="publish_tag_detections_image" type="bool" value="true" />      
+    </node>
+  
+  </launch>

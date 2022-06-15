@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <arg name="vehicle" default="X1" />
+  <arg name="type" default="robot" />
+  <arg name="fullMerge" default="false" />
+  <arg name="freePrioritize" default="false" />
+  <arg name="publishMergedPCL" default="false" />
+  <arg name="publishDiffPCL" default="false" />
+  <arg name="resolution" default="0.2" />
+
+  <include file="$(find octomap_merger)/launch/octomap_merger.launch">
+    <arg name="vehicle" value="$(arg vehicle)" />
+    <arg name="type" value="$(arg type)" />
+    <arg name="fullMerge" value="$(arg fullMerge)" />
+    <arg name="freePrioritize" value="$(arg freePrioritize)" />
+    <arg name="publishMergedPCL" value="$(arg publishMergedPCL)" />
+    <arg name="publishDiffPCL" value="$(arg publishDiffPCL)" />
+    <arg name="resolution" value="$(arg resolution)" />
+  </include>
+</launch>

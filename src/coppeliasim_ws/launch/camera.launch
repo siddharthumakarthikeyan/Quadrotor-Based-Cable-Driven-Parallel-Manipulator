@@ -1,0 +1,47 @@
+<launch>
+  <node pkg="nodelet" type="nodelet" name="nodelet_manager" args="manager" />
+
+  <node pkg="nodelet" type="nodelet" name="nodelet_1" args="load depth_image_proc/point_cloud_xyz nodelet_manager">
+    <remap from="camera_info" to="/drone_1/kinect_1/camera/camera_info"/>
+    <remap from="image_rect" to="/drone_1/kinect_1/camera/depth_image"/>
+    <remap from="points" to="/drone_1/kinect_1/camera/depth/points"/>
+  </node>
+  <node pkg="nodelet" type="nodelet" name="nodelet_2" args="load depth_image_proc/point_cloud_xyz nodelet_manager">
+    <remap from="camera_info" to="/drone_2/kinect_2/camera/camera_info"/>
+    <remap from="image_rect" to="/drone_2/kinect_2/camera/depth_image"/>
+    <remap from="points" to="/drone_2/kinect_2/camera/depth/points"/>
+  </node>
+  <node pkg="nodelet" type="nodelet" name="nodelet_3" args="load depth_image_proc/point_cloud_xyz nodelet_manager">
+    <remap from="camera_info" to="/drone_3/kinect_3/camera/camera_info"/>
+    <remap from="image_rect" to="/drone_3/kinect_3/camera/depth_image"/>
+    <remap from="points" to="/drone_3/kinect_3/camera/depth/points"/>
+  </node>
+  <node pkg="nodelet" type="nodelet" name="nodelet_4" args="load depth_image_proc/point_cloud_xyz nodelet_manager">
+    <remap from="camera_info" to="/drone_4/kinect_4/camera/camera_info"/>
+    <remap from="image_rect" to="/drone_4/kinect_4/camera/depth_image"/>
+    <remap from="points" to="/drone_4/kinect_4/camera/depth/points"/>
+  </node>
+
+  <node pkg="nodelet" type="nodelet" name="nodelet_5" args="load depth_image_proc/point_cloud_xyz nodelet_manager">
+    <remap from="camera_info" to="/robot_5/kinect_5/camera/camera_info"/>
+    <remap from="image_rect" to="/robot_5/kinect_5/camera/depth_image"/>
+    <remap from="points" to="/robot_5/kinect_5/camera/depth/points"/>
+  </node>
+  <node pkg="nodelet" type="nodelet" name="nodelet_6" args="load depth_image_proc/point_cloud_xyz nodelet_manager">
+    <remap from="camera_info" to="/robot_6/kinect_6/camera/camera_info"/>
+    <remap from="image_rect" to="/robot_6/kinect_6/camera/depth_image"/>
+    <remap from="points" to="/robot_6/kinect_6/camera/depth/points"/>
+  </node>
+  <node pkg="nodelet" type="nodelet" name="nodelet_7" args="load depth_image_proc/point_cloud_xyz nodelet_manager">
+    <remap from="camera_info" to="/robot_7/kinect_7/camera/camera_info"/>
+    <remap from="image_rect" to="/robot_7/kinect_7/camera/depth_image"/>
+    <remap from="points" to="/robot_7/kinect_7/camera/depth/points"/>
+  </node>
+  <node pkg="nodelet" type="nodelet" name="nodelet_8" args="load depth_image_proc/point_cloud_xyz nodelet_manager">
+    <remap from="camera_info" to="/robot_8/kinect_8/camera/camera_info"/>
+    <remap from="image_rect" to="/robot_8/kinect_8/camera/depth_image"/>
+    <remap from="points" to="/robot_8/kinect_8/camera/depth/points"/>
+  </node>
+
+  
+</launch>

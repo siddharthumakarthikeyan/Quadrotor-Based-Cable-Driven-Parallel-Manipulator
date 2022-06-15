@@ -1,0 +1,67 @@
+<!-- 
+  Example launch file for octomap_server mapping: 
+  Listens to incoming PointCloud2 data and incrementally builds an octomap. 
+  The data is sent out in different representations. 
+
+  Copy this file into your workspace and adjust as needed, see
+  www.ros.org/wiki/octomap_server for details  
+-->
+<launch>
+	<node pkg="octomap_server" type="octomap_server_node" name="octomap_server_1">
+		<param name="resolution" value="0.05" />
+		<param name="frame_id" type="string" value="map" />
+		<param name="sensor_model/max_range" value="80.0" />
+		<remap from="cloud_in" to="/drone_1/kinect_1/camera/depth/points" />
+        <remap from="octomap_point_cloud_centers" to="/drone_1/map" />
+	</node>
+    <node pkg="octomap_server" type="octomap_server_node" name="octomap_server_2">
+		<param name="resolution" value="0.05" />
+		<param name="frame_id" type="string" value="map" />
+		<param name="sensor_model/max_range" value="80.0" />
+		<remap from="cloud_in" to="/drone_2/kinect_2/camera/depth/points" />
+        <remap from="octomap_point_cloud_centers" to="/drone_2/map" />
+	</node>
+    <node pkg="octomap_server" type="octomap_server_node" name="octomap_server_3">
+		<param name="resolution" value="0.05" />
+		<param name="frame_id" type="string" value="map" />
+		<param name="sensor_model/max_range" value="80.0" />
+		<remap from="cloud_in" to="/drone_3/kinect_3/camera/depth/points" />
+        <remap from="octomap_point_cloud_centers" to="/drone_3/map" />
+	</node>
+    <node pkg="octomap_server" type="octomap_server_node" name="octomap_server_4">
+		<param name="resolution" value="0.05" />
+		<param name="frame_id" type="string" value="map" />
+		<param name="sensor_model/max_range" value="80.0" />
+		<remap from="cloud_in" to="/drone_4/kinect_4/camera/depth/points" />
+        <remap from="octomap_point_cloud_centers" to="/drone_4/map" />
+	</node>
+
+    <node pkg="octomap_server" type="octomap_server_node" name="octomap_server_5">
+		<param name="resolution" value="0.05" />
+		<param name="frame_id" type="string" value="map" />
+		<param name="sensor_model/max_range" value="80.0" />
+		<remap from="cloud_in" to="/robot_5/kinect_5/camera/depth/points" />
+        <remap from="octomap_point_cloud_centers" to="/robot_5/map" />
+	</node>
+    <node pkg="octomap_server" type="octomap_server_node" name="octomap_server_6">
+		<param name="resolution" value="0.05" />
+		<param name="frame_id" type="string" value="map" />
+		<param name="sensor_model/max_range" value="80.0" />
+		<remap from="cloud_in" to="/robot_6/kinect_6/camera/depth/points" />
+        <remap from="octomap_point_cloud_centers" to="/robot_6/map" />
+	</node>
+    <node pkg="octomap_server" type="octomap_server_node" name="octomap_server_7">
+		<param name="resolution" value="0.05" />
+		<param name="frame_id" type="string" value="map" />
+		<param name="sensor_model/max_range" value="80.0" />
+		<remap from="cloud_in" to="/robot_7/kinect_7/camera/depth/points" />
+        <remap from="octomap_point_cloud_centers" to="/robot_7/map" />
+	</node>
+    <node pkg="octomap_server" type="octomap_server_node" name="octomap_server_8">
+		<param name="resolution" value="0.05" />
+		<param name="frame_id" type="string" value="map" />
+		<param name="sensor_model/max_range" value="80.0" />
+		<remap from="cloud_in" to="/robot_8/kinect_8/camera/depth/points" />
+        <remap from="octomap_point_cloud_centers" to="/robot_8/map" />
+	</node> 
+</launch>
