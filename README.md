@@ -13,7 +13,10 @@ Simulation of Mobile Cable Driven Parallel Manipulator using Quadrotors and Omni
 
 - Download Coppeliasim [Coppeliasim V4.2.0](https://www.coppeliarobotics.com/downloads).
 - Extract the coppeliasim folder in the root folder.
-- Add following line to ~/.bash.rc : `export COPPELIASIM_ROOT_DIR=~/CoppeliaSim_Edu_V4_2_0_Ubuntu20_04/`   
+- Add following line to ~/.bash.rc : `export COPPELIASIM_ROOT_DIR=~/CoppeliaSim_Edu_V4_2_0_Ubuntu20_04/`  
+- `mkdir cpdr`
+- `cd cdpr && mkdir src`
+- `cd src`
 - `git clone https://github.com/siddharthumakarthikeyan/Quadrotor-Based-Cable-Driven-Parallel-Manipulator.git`
 - `cd cdpr`
 - `catkin_make`
