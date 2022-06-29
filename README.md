@@ -1,6 +1,9 @@
 # Quadrotor-Based-Cable-Driven-Parallel-Manipulator
 Simulation of Mobile Cable Driven Parallel Manipulator using Quadrotors and Omni Directional Drive using Coppeliasim (VREP) and ROS
 
+![alt text](https://github.com/siddharthumakarthikeyan/Quadrotor-Based-Cable-Driven-Parallel-Manipulator/blob/master/src/CDPR.PNG?raw=true)
+
+
 ## System configuration
 - Ubuntu : 20.04
 - ROS : noetic+
