@@ -30,7 +30,7 @@ Simulation of Mobile Cable Driven Parallel Manipulator using Quadrotors and Omni
 - **Terminal 1 :** Start `roscore` in one terminal.
 - **Terminal 2 :** Launch coppeliasim
 - Load scenes from the repository `~/src/coppeliasim_ws/vrep_scenes`
-- **Terminal 3 : Depth images to PointCLoud** `roslaunch coppeliasim_ws camera.launch` 
+- **Terminal 3 : Depth images to PointCLoud** `roslaunch coppeliasim_ws camera.launch`
 - **Terminal 4 : PointCloud to map ** `roslaunch coppeliasim_ws mapping.launch`
 
 ## End effector detection
